@@ -1,17 +1,40 @@
 .sale {
   background-image: url(../images/sale/background-mob-1x.jpg);
-  padding-left: 17px;
-  padding-right: 18px;
-  padding-bottom: 48px;
+  // padding-left: 17px;
+  // padding-right: 18px;
+  // padding-bottom: 48px;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/sale/background-tab-1x.jpg);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/sale/background-dt-1x.jpg);
+  }
+}
+
+.sale-cards {
   @media screen and (min-width: 480px) {
     width: 480px;
+    margin: 0 auto;
+    padding-left: 17px;
+    padding-right: 18px;
+    // padding-bottom: 48px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
+    padding: 0 80px;
+    margin: 0 auto;
   }
   @media screen and (min-width: 1280px) {
     width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+
+.mob-is-hidden {
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }
 
@@ -22,9 +45,30 @@
   color: #ffffff;
 }
 
+.sale-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    justify-content: center;
+    // width: calc((100% - 38px) / 2);
+  }
+  @media screen and (min-width: 1280px) {
+    gap: 20px;
+  }
+}
+
 .sale-item {
   padding-bottom: 12px;
-  margin-bottom: 24px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 28px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 24px;
+  }
 }
 
 .sale-img {
@@ -41,7 +85,7 @@
   color: #86e543;
   max-width: 261px;
   padding-left: 8px;
-  padding-right: 16px;
+  // padding-right: 16px;
   margin-bottom: 8px;
 }
 
